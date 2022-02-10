@@ -1,8 +1,0 @@
-name: learn-github-actions
-on: [push]
-jobs:
-  check-bats-version:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Release Drafter
-        uses: release-drafter/release-drafter@v5.18.1
