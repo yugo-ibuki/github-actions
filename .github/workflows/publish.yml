@@ -8,27 +8,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Create Pull Request
-        id: cpr
-        uses: peter-evans/create-pull-request@v3
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          base: ${{ github.head_ref }}
-          signoff: false
-          branch: feature/update-package
-          branch-suffix: timestamp
-          delete-branch: true
-          title: 'Update Packages by CI'
-          body: |
-            @${{ github.actor }}
-            ```
-            ${{ github.event.inputs.packages }}
-            ${{ github.event.client_payload.packages }}
-            ```
-      - name: Check outputs
         run: |
-          echo "Pull Request Number - ${{ steps.cpr.outputs.pull-request-number }}"
-          echo "Pull Request URL - ${{ steps.cpr.outputs.pull-request-url }}"
+          git add .
+          git commit -m "release"
+          git pull
+          git push origin release
 
   published:
     runs-on: ubuntu-latest
