@@ -6,19 +6,6 @@ on:
       - 'release/**'
 
 jobs:
-
-  create_pull_request:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - name: Create Pull Request
-        id: cpr
-        uses: peter-evans/create-pull-request@v3
-      - name: Check outputs
-        run: |
-          echo "Pull Request Number - ${{ steps.cpr.outputs.pull-request-number }}"
-          echo "Pull Request URL - ${{ steps.cpr.outputs.pull-request-url }}"
-
   update_release_draft:
     runs-on: ubuntu-latest
     steps:
