@@ -1,8 +1,5 @@
 name: "Publish release"
 on:
-  push:
-    branches:
-      - 'release/**'
   release:
     types: [published]
 jobs:
