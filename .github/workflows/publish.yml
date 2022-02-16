@@ -9,10 +9,12 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         run: |
+          git checkout release
           git add .
           git commit -m "release"
           git pull
-          git push origin release
+          git push origin release -f
+          git checkout main
 
   published:
     runs-on: ubuntu-latest
