@@ -12,9 +12,8 @@ jobs:
         id: cpr
         uses: peter-evans/create-pull-request@v3
         with:
+          token: ${{ secrets.GITHUB_TOKEN }}
           base: ${{ github.head_ref }}
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Check outputs
         run: |
           echo "Pull Request Number - ${{ steps.cpr.outputs.pull-request-number }}"
