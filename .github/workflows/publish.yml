@@ -14,6 +14,17 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           base: ${{ github.head_ref }}
+          signoff: false
+          branch: feature/update-package
+          branch-suffix: timestamp
+          delete-branch: true
+          title: 'Update Packages by CI'
+          body: |
+            @${{ github.actor }}
+            ```
+            ${{ github.event.inputs.packages }}
+            ${{ github.event.client_payload.packages }}
+            ```
       - name: Check outputs
         run: |
           echo "Pull Request Number - ${{ steps.cpr.outputs.pull-request-number }}"
