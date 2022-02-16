@@ -9,4 +9,4 @@ jobs:
   published:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "release"
+      - run: echo "publish release"
