@@ -14,4 +14,6 @@ jobs:
       - uses: release-drafter/release-drafter@v5
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - run: echo "release"
+      - run: echo "publish main"
+      - run: echo ${GITHUB_TOKEN}
+      - run: echo ${{ secrets.GITHUB_TOKEN }}

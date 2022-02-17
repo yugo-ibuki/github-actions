@@ -1,12 +1,24 @@
 name: "Publish release"
 on:
-  push:
-    branches:
-      - 'release/**'
   release:
     types: [published]
 jobs:
-  published:
+  release:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "release"
+      - uses: actions/checkout@v2
+        with:
+            fetch-depth: '0'
+      - run: |
+          git config --global user.email "y.ibuki91@gmail.com"
+          git config --global user.name "yugo-ibuki"
+          git --version
+          git checkout release
+          git merge origin/main
+          git push origin release
+#          git branch
+#      - run: echo '${{ toJson(github.event) }}'
+#      - run: git status
+#      - run: git branch
+#        env:
+#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

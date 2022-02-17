@@ -1,0 +1,8 @@
+{
+  "name": "github-actions",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:yugo-ibuki/github-actions.git",
+  "author": "yugo-ibuki <y.ibuki91@gmail.com>",
+  "license": "MIT"
+}
