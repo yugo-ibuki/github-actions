@@ -16,7 +16,7 @@ jobs:
       - run: |
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git config --global user.name "github-actions[bot]"
-      - run: echo '${{ toJson(github.event) }}'
+      - run: echo '${{ toJson(github.event.pull_request) }}'
 #      - run: git status
 #      - run: git branch
 #        env:
