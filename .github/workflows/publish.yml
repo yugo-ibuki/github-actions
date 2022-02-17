@@ -10,8 +10,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          ref: ${{github.event.pull_request.head.ref}}
-          repository: yugo-ibuki/github-actions
           path: release
       - run: |
           git config --global user.email "y.ibuki91@gmail.com"
