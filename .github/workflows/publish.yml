@@ -1,9 +1,17 @@
 name: "Publish release"
+
 on:
   release:
     types: [published]
-jobs:
 
+  workflow_dispatch:
+    inputs: # <= 入力欄の定義
+      ref:
+        description: "ref"
+        required: false
+        default: ""
+
+jobs:
   release:
     runs-on: ubuntu-latest
     steps:
@@ -18,7 +26,6 @@ jobs:
           git config --global user.email "y.ibuki91@gmail.com"
           git config --global user.name "yugo-ibuki"
           echo '${{ toJson(github) }}'
-          git --version
           git --version
           git checkout release
 #          echo '${{ toJson(github.event) }}'
