@@ -14,8 +14,6 @@ jobs:
           ref: ${{github.event.pull_request.head.ref}}
           repository: yugo-ibuki/github-actions
           path: release
-        env:
-          ref: ${{github.event.pull_request.head.ref}}
       - run: |
           git config --global user.email "y.ibuki91@gmail.com"
           git config --global user.name "yugo-ibuki"
