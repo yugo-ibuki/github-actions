@@ -13,7 +13,7 @@ jobs:
           git config --global user.name "github-actions[bot]"
       - run: git status
       - run: git branch
-      - run: git checkout -b ${}release origin/release
+      - run: git checkout -b ${github.ref}/release origin/${github.ref}/release
       - run: git branch
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
