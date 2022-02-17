@@ -15,6 +15,7 @@ jobs:
           git --version
           git checkout release
           git merge origin/main
+          git push origin release
 #          git branch
 #      - run: echo '${{ toJson(github.event) }}'
 #      - run: git status
