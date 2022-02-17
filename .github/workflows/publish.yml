@@ -9,7 +9,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          repository: yugo-ibuki/github-action
           path: main
       - run: |
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
