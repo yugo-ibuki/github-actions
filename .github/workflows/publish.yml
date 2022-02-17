@@ -10,13 +10,16 @@ jobs:
       - uses: actions/checkout@v2
         with:
           ref: ${{github.event.pull_request.head.ref}}
-          path: main
+          path: release
         env:
           ref: ${{github.event.pull_request.head.ref}}
       - run: |
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git config --global user.name "github-actions[bot]"
           echo '${{ toJson(github) }}'
+      - run: |
+          git --version
+          git cechout release
 #          echo '${{ toJson(github.event) }}'
 #          git checkout release
 #          git branch
