@@ -19,7 +19,7 @@ jobs:
           echo '${{ toJson(github) }}'
       - run: |
           git --version
-          git chechout release
+          git checkout release
 #          echo '${{ toJson(github.event) }}'
 #          git checkout release
 #          git branch
