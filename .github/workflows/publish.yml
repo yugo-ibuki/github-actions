@@ -16,9 +16,10 @@ jobs:
       - run: |
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git config --global user.name "github-actions[bot]"
-          echo '${{ toJson(github.event) }}'
-          git checkout release
-          git branch
+          echo '${{ toJson(github) }}'
+#          echo '${{ toJson(github.event) }}'
+#          git checkout release
+#          git branch
 #      - run: echo '${{ toJson(github.event) }}'
 #      - run: git status
 #      - run: git branch
