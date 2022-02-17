@@ -7,11 +7,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+        with:
+            fetch-depth: '0'
       - run: |
           git config --global user.email "y.ibuki91@gmail.com"
           git config --global user.name "yugo-ibuki"
           git --version
-#          git checkout release
+          git checkout release
 #          git branch
 #      - run: echo '${{ toJson(github.event) }}'
 #      - run: git status
