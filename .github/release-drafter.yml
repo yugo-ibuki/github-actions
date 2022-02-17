@@ -13,11 +13,12 @@ categories:
   - title: '🧰 Maintenance'
     labels:
       - 'chore'
+      - 'refactor'
 autolabeler:
   - label: feature
     branch:
       - '/^feat(ure)?[/-].+/'
-  - label: bug
+  - label: bugfix
     branch:
       - '/^fix[/-].+/'
   - label: chore
