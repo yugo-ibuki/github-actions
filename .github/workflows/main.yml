@@ -1,8 +1,9 @@
 name: Release Drafter
 
 on:
-  pull_request:
-    types: [opened, reopened, synchronize]
+  push:
+    branches:
+      - main
 
 jobs:
   update_release_draft:
