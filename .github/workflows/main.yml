@@ -5,16 +5,12 @@ on:
     branches:
       - main
   pull_request:
-#    types: [closed]
-#  pull_request_target:
     types: [opened, reopened, synchronize]
 
 jobs:
   update_release_draft:
     runs-on: ubuntu-latest
-#    if: github.event.pull_request.merged == true
     steps:
-      - uses: release-drafter/release-drafter@v5
+      - uses: release-drafter/release-drafter@v5.3
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - run: echo "publish main"
