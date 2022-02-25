@@ -1,5 +1,6 @@
 (() => {
     // リセット
+<<<<<<< Updated upstream
     console.log('jjj')
     console.log('kkk')
     console.log('lll')
@@ -13,4 +14,8 @@
     console.log('777')
     console.log('888')
     console.log('999')
+=======
+    console.log('1')
+    console.log('2')
+>>>>>>> Stashed changes
 })()
