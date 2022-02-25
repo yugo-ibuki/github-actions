@@ -1,40 +1,49 @@
 name-template: 'v$NEXT_PATCH_VERSION'
 tag-template: 'v$NEXT_PATCH_VERSION'
 categories:
-  - title: '🚀 Features'
+  - title: '🚀 Feat'
     labels:
-      - 'feature'
-      - 'enhancement'
-  - title: '🐛 Bug Fixes'
+      - 'feat'
+  - title: '🧑‍🔧 Fix'
     labels:
       - 'fix'
-      - 'bugfix'
-      - 'bug'
-  - title: '🧰 Maintenance'
+  - title: '👍️ Refactor'
+    labels:
+      - 'refactor'
+  - title: '✅ Test'
+    labels:
+      - 'test'
+  - title: '📔 Docs'
+    labels:
+      - 'docs'
+  - title: '🖊️ chore'
     labels:
       - 'chore'
-      - 'refactor'
+  - title: '📦 dependencies'
+    labels:
+      - 'dependencies'
 autolabeler:
-  - label: feature
+  - label: feat
     branch:
       - '/^feat(ure)?[/-].+/'
-  - label: bugfix
+  - label: fix
     branch:
       - '/^fix[/-].+/'
-  - label: chore
-    branch:
-      - '/^chore[/-].+/'
   - label: refactor
     branch:
       - '/(refactor|refactoring)[/-].+/'
-  - label: documentation
+  - label: test
+    branch:
+      - '/^test[/-].+/'
+  - label: docs
     branch:
       - '/doc(umentation)[/-].+/'
-    files:
-      - '*.md'
-  - label: enhancement
+  - label: chore
     branch:
-      - '/(enhancement|improve)[/-].+/'
+      - '/^chore[/-].+/'
+  - label: dependencies
+    branch:
+      - '/^dependencies[/-].+/'
 change-title-escapes: '\<*_&'
 exclude-labels:
   - 'exclude from changelog'
